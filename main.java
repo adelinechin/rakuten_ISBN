@@ -4,8 +4,6 @@ import java.util.*;
 
 public class main {
 
-
-
     public static void main(String[] args){
         
         boolean check = true;
