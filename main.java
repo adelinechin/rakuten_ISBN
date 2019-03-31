@@ -9,10 +9,10 @@ public class main {
     public static void main(String[] args){
         
         boolean check = true;
-        System.out.println("Please input Product ID : ");
         
         while(check){
             try{
+            System.out.print("Please input Product ID : ");
             Scanner sc = new Scanner(System.in);
             String input = sc.nextLine();
             //convert input from string to int
@@ -55,16 +55,8 @@ public class main {
                         list.add(0);
                         System.out.println("ISBN " + list.get(0) + "-" + list.get(1) + list.get(2) + "-" + list.get(3) + list.get(4) + list.get(5) + list.get(6) + list.get(7) + list.get(8) + "-" + list.get(9));
                     }else{
-                        
-                        for(int i : list){
-                            System.out.print("LIST:" + i);
-                        }
-                        
-                        
-                        System.out.println("divide:" + sumOfProductId11with9numbers);
                         sumOfProductId11with9numbers = mod11for9numbers(list);
                         int divide = sumOfProductId11with9numbers/11;
-                        System.out.println("divide:" + divide);
                         int newSum = 11*(divide+1);
                         int difference = newSum - sumOfProductId11with9numbers;
                         list.add(difference);
@@ -76,11 +68,8 @@ public class main {
                     }
                 }
             }
-           
             }catch(Exception e){
-                
                 System.out.println("Please input only numbers!!");
-                
             }
         }
     }
